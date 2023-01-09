@@ -1,0 +1,63 @@
+.item{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+   
+
+    &-todo{
+        display: flex;
+        align-items: center;
+
+        &-checkbox{
+            margin-right: 3rem;
+            position: relative;
+
+            & > input[type="checkbox"]{
+                position: absolute;
+                opacity: 0;
+                height: 0;
+                width: 0;
+                left: .35rem;
+                top: -.55rem;
+            }
+
+            & > label{
+                cursor: pointer;
+                position: relative;
+                display: block;
+            }
+
+            & > label::before{
+                content: '';
+                position: absolute;
+                margin-top: -13px;
+                display: block;
+                height: 1.5rem;
+                width: 1.5rem;
+                background-color: hsla(0, 0%, 76%, 0.603);
+                border-radius: 3px;
+            } 
+
+            & > input[type = "checkbox"]:checked + label::before{
+                background-color: hsl(244, 87%, 64%);
+            }
+        }
+
+        &-text{
+            font-size: 1.3rem;
+            font-weight: 600;
+            color:  hsla(0, 0%, 20%, 0.842);
+        }
+
+        &-date{
+            font-size: .7rem;
+            font-weight: 600;
+            color:  rgb(97, 97, 97);
+        }
+    }
+}

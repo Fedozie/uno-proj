@@ -1,5 +1,5 @@
 import Button from '../UI/button';
-import TodoConatiner from '../todos/todoContainer';
+import TodoContainer from '../todos/todoContainer';
 
 import styles from './main.module.scss';
 
@@ -9,7 +9,7 @@ const Main = () => {
             <div>
                 <Button text = {"Add Task"}/>
             </div>
-            <TodoConatiner/>
+            <TodoContainer/>
         </section>
     );
 }

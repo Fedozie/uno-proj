@@ -11,3 +11,12 @@
         background-color: hsla(244, 87%, 64%, 0.689);
     }
 }
+
+.error{
+    background-color: hsl(0, 100%, 50%);
+
+    &:hover{
+        background-color: hsl(0, 100%, 50%, 0.689);
+    }
+}
+

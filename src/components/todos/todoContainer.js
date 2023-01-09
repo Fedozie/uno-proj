@@ -1,17 +1,14 @@
+import TodoItem from './todoItem';
 
 import styles from './todoContainer.module.scss';
 
-const TodoConatiner = () => {
+const TodoContainer = () => {
     return (  
         <div className={styles.container}>
-            <div>
-                <h1>Pomodoro</h1>
-            </div>
-            <div>
-                <h1>Feymannn</h1>
-            </div>
+            <TodoItem/>
+            <TodoItem/>
         </div>
     );
 }
  
-export default TodoConatiner;
+export default TodoContainer;
