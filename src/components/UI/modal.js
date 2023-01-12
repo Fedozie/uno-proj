@@ -20,6 +20,7 @@ const Modal = ({children, onClose}) => {
     return (
         <div className = {styles.container}>
             <Backdrop onClose={onClose}/>
+            <button className={styles.button}>Mna</button>
             <ModalOverlay>{children}</ModalOverlay>
         </div>
     );

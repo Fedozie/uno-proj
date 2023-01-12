@@ -1,0 +1,14 @@
+.select{
+    width: inherit;
+    height: auto;
+
+    & > select{
+        width: 100%;
+        padding: .8rem;
+        outline: none;
+        border: 1px solid black;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+}

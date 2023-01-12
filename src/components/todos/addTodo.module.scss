@@ -1,0 +1,22 @@
+
+
+.heading{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.topics-section{
+    width: inherit;
+    margin-bottom: 1rem;
+
+    & > input[type="text"]{
+        width: 100%;
+        padding: .8rem;
+    }
+}
+
+.topics{
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
