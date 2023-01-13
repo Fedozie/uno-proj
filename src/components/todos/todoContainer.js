@@ -5,8 +5,8 @@ import styles from './todoContainer.module.scss';
 const TodoContainer = () => {
     return (  
         <div className={styles.container}>
-            <TodoItem/>
-            <TodoItem/>
+            {/* <TodoItem/>
+            <TodoItem/> */}
         </div>
     );
 }
