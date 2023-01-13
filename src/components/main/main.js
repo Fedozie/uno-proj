@@ -8,17 +8,24 @@ import styles from './main.module.scss';
 import AddTodo from '../todos/addTodo';
 
 const Main = () => {
-    const [addTask, setAddTask] = useState(true);
+    const [addTask, setAddTask] = useState(false);
 
-    const addTaskHandler = () => {
-        setAddTask(true)
+    const openAddTask = () => {
+        setAddTask(true);
+    }
+
+    const closeAddTask = () => {
+        setAddTask(false);
     }
 
     return (
         <section className={styles.main}>
-            {addTask && <AddTodo/>}
+            {addTask && <AddTodo closeAddTodo = {closeAddTask}/>}
             <div>
-                <Button text = {"Add Task"} onClick = {addTaskHandler}/>
+                <Button 
+                    text = {"Add Task"} 
+                    onClick = {openAddTask}
+                />
             </div>
             <TodoContainer/>
         </section>

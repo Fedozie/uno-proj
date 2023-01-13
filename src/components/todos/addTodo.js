@@ -5,7 +5,7 @@ import SelectInput from "../UI/selectInput";
 import styles from "./addTodo.module.scss";
 
 
-const AddTodo = () => {
+const AddTodo = ({closeAddTodo}) => {
 
     const options = [
         { value: 'incompelete', text: 'Incomplete' },
@@ -13,7 +13,7 @@ const AddTodo = () => {
     ]
 
     return (
-        <Modal>
+        <Modal onClose={closeAddTodo}>
             <h2 className={styles.heading}>Add Todo</h2>
             <div className={styles["topics-section"]}>
                 <label htmlFor="title" className={styles.topics}>Title</label>

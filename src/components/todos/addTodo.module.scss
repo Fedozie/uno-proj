@@ -1,8 +1,7 @@
-
-
 .heading{
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    color: hsl(246, 5%, 42%);
 }
 
 .topics-section{
@@ -12,6 +11,8 @@
     & > input[type="text"]{
         width: 100%;
         padding: .8rem;
+        border: 1px solid hsl(246, 5%, 42%);
+        border-radius: 5px;
     }
 }
 
@@ -19,4 +20,5 @@
     font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
+    color: hsl(246, 5%, 42%);
 }
