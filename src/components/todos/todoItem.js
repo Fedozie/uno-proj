@@ -4,7 +4,7 @@ import Button from '../UI/button';
 import styles from './todoItem.module.scss';
 
 
-const TodoItem = () => {
+const TodoItem = ({todo}) => {
     const dltBtnStyle = {
         marginLeft: "1rem"
     }
@@ -17,7 +17,7 @@ const TodoItem = () => {
                     <label htmlFor="checkbox"></label>
                 </div>
                 <div>
-                    <p className={styles["item-todo-text"]}>Textttttsss</p>
+                    <p className={styles["item-todo-text"]}>{todo.task}</p>
                     <p className={styles["item-todo-date"]}>Date</p>
                 </div>
             </div>

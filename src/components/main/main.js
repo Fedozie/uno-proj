@@ -8,6 +8,15 @@ import styles from './main.module.scss';
 import AddTodo from '../todos/addTodo';
 
 const Main = () => {
+    const [todos, setTodos] = useState([]);
+
+    const listTodo = (todo) => {
+        setTodos([todo, ...todos])
+    }
+
+   
+
+
     const [addTask, setAddTask] = useState(false);
 
     const openAddTask = () => {
@@ -27,7 +36,9 @@ const Main = () => {
                     onClick = {openAddTask}
                 />
             </div>
-            <TodoContainer/>
+            <TodoContainer 
+                todos = {todos}
+            />
         </section>
     );
 }

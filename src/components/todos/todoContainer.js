@@ -2,11 +2,17 @@ import TodoItem from './todoItem';
 
 import styles from './todoContainer.module.scss';
 
-const TodoContainer = () => {
+const TodoContainer = ({todos}) => {
     return (  
         <div className={styles.container}>
-            {/* <TodoItem/>
-            <TodoItem/> */}
+            {
+                todos.map(todo => (
+                    <TodoItem 
+                        key = {todo.id}
+                        todo = {todo}
+                    />
+                ))
+            }
         </div>
     );
 }
