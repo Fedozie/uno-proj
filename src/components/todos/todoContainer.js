@@ -2,14 +2,16 @@ import TodoItem from './todoItem';
 
 import styles from './todoContainer.module.scss';
 
-const TodoContainer = ({todos}) => {
+const TodoContainer = ({todos, deleteTodo, toggleComplete}) => {
     return (  
         <div className={styles.container}>
             {
                 todos.map(todo => (
                     <TodoItem 
                         key = {todo.id}
-                        todo = {todo}
+                        todo = {todos}
+                        deleteTodo = {deleteTodo}
+                        toggleComplete = {toggleComplete}
                     />
                 ))
             }

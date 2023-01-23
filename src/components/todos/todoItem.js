@@ -4,9 +4,13 @@ import Button from '../UI/button';
 import styles from './todoItem.module.scss';
 
 
-const TodoItem = ({todo}) => {
+const TodoItem = ({todo, deleteTodo}) => {
     const dltBtnStyle = {
         marginLeft: "1rem"
+    }
+
+    const removeTodo = () => {
+        deleteTodo(todo.id)
     }
     
     return (
@@ -23,7 +27,11 @@ const TodoItem = ({todo}) => {
             </div>
             <div className={styles["item-CTA"]}>
                 <Button text = {"Edit"}/>
-                <Button style = {dltBtnStyle} text = {"Delete"} className = {"dlt"} />
+                <Button 
+                    style = {dltBtnStyle} 
+                    text = {"Delete"} 
+                    className = {"dlt"}
+                    onClick = {removeTodo} />
             </div>
         </div>
     );

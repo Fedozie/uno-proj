@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import uuid from 'react-uuid';
 import Modal from "../UI/modal";
 import SelectInput from "../UI/selectInput";
 import Button from "../UI/button";
@@ -6,7 +7,7 @@ import Button from "../UI/button";
 import styles from "./addTodo.module.scss";
 
 
-const AddTodo = ({ closeAddTodo }) => {
+const AddTodo = ({ closeAddTodo, addTodo }) => {
 
     const [todo, setTodo] = useState({
         id: "",
@@ -21,7 +22,8 @@ const AddTodo = ({ closeAddTodo }) => {
     const submitTodo = (e) => {
         e.preventDefault();
         if(todo.task.trim()){
-            
+            addTodo({...todo, id: uuid()})
+            setTodo({...todo, task: ""})
         }
         closeAddTodo();
     }

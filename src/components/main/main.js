@@ -27,9 +27,30 @@ const Main = () => {
         setAddTask(false);
     }
 
+    const deleteTodo = (id) => {
+        setTodos(todos.filter(todo => todo.id !== id))
+    }
+
+    const toggleComplete = (id) => {
+        setTodos(
+            todos.map(todo => {
+                if(todo.id === id){
+                    return{
+                        ...todo, 
+                        completed: !todo.completed
+                    }
+                }
+            })
+        )
+    }
+
     return (
         <section className={styles.main}>
-            {addTask && <AddTodo closeAddTodo = {closeAddTask}/>}
+            {addTask && <AddTodo 
+                closeAddTodo = {closeAddTask}
+                addTodo = {listTodo}
+                />
+            }
             <div>
                 <Button 
                     text = {"Add Task"} 
@@ -38,6 +59,8 @@ const Main = () => {
             </div>
             <TodoContainer 
                 todos = {todos}
+                deleteTodo = {deleteTodo}
+                toggleComplete = {toggleComplete}
             />
         </section>
     );
